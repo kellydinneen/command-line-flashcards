@@ -18,22 +18,23 @@ class Game {
   }
 
   start() {
-    const deck = this.startDeck();
-    const round = this.startRound(deck);
-    this.printMessage(deck, round);
-    this.printQuestion(round);
+    this.startDeck();
+    this.startRound(this.deck);
+    this.printMessage(this.deck, this.round);
+    this.printQuestion(this.round);
   }
 
   startDeck() {
-    const newDeck = (deck, questionData) => {
+    const reduceQuestionData = (cards, questionData) => {
     let card = new Card(questionData.id, questionData.question, questionData.answers, questionData.correctAnswer);
-    deck.push(card);
+    cards.push(card);
+    return cards;
     }
-    return new Deck(prototypeQuestions.reduce(reduction, []));
+    this.deck = new Deck(prototypeQuestions.reduce(reducer, []));
   }
 
   startRound(deck) {
-    return new Round(deck);
+    this.round = new Round(deck);
   }
 };
 
