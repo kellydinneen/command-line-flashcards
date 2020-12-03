@@ -8,7 +8,6 @@ const Deck = require('../src/Deck');
 describe('Round', function() {
 
   it('should be a function', function() {
-    const round = new Round();
     expect(Round).to.be.a('function');
   });
 
@@ -18,9 +17,24 @@ describe('Round', function() {
   });
 
   it('should have a deck', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -30,9 +44,24 @@ describe('Round', function() {
   });
 
   it('should start with first card in deck as current card', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -42,9 +71,24 @@ describe('Round', function() {
   });
 
   it('should start with 0 turns', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -54,9 +98,24 @@ describe('Round', function() {
   });
 
   it('should start with no incorrect guesses', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -66,9 +125,24 @@ describe('Round', function() {
   });
 
   it('should update turn count when turn is taken', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -81,9 +155,24 @@ describe('Round', function() {
   });
 
   it('should update current card after turn is taken', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -96,9 +185,24 @@ describe('Round', function() {
   });
 
   it('should store incorrect guesses', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -111,9 +215,24 @@ describe('Round', function() {
   });
 
   it('should provide feedback', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 
@@ -125,9 +244,24 @@ describe('Round', function() {
   });
 
   it('should calculate percentage correct guesses', function() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(4, "What type of prototype method does not modify the existing array but returns a particular representation of the array?",["mutator method", "accessor method", "iteration method"], "accessor method");
-    const card3 = new Card(11, "Which iteration method returns a new array with all elements that match a given condition?",["filter()", "find()", "map()"],"filter()");
+    const card1 = new Card(
+      1,
+      'What allows you to define a set of related information using key-value pairs?',
+      ['object', 'array', 'function'],
+      'object'
+    );
+    const card2 = new Card(
+      4,
+      "What type of prototype method does not modify the existing array but returns a particular representation of the array?",
+      ["mutator method", "accessor method", "iteration method"],
+      "accessor method"
+    );
+    const card3 = new Card(
+      11,
+      "Which iteration method returns a new array with all elements that match a given condition?",
+      ["filter()", "find()", "map()"],
+      "filter()"
+    );
 
     const deck = new Deck([card1, card2, card3])
 

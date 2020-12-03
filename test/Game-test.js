@@ -8,7 +8,6 @@ const Deck = require('../src/Deck');
 describe('Game', function() {
 
   it('should be a function', function() {
-    const game = new Game();
     expect(Game).to.be.a('function');
   });
 
