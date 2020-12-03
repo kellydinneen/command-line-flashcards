@@ -13,17 +13,20 @@ class Round {
     return ((this.turns - this.incorrectGuesses.length) / this.turns) * 100;
   }
   endRound() {
-    console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    console.log(
+      `**Round over!**
+      You answered ${this.calculatePercentCorrect()}%
+      of the questions correctly!`);
   }
   takeTurn(guess) {
     const turn = new Turn(guess, this.returnCurrentCard());
-    if(!turn.evaluateGuess()) {
+    if (!turn.evaluateGuess()) {
       this.incorrectGuesses.push(guess);
-    };
+    }
     this.turns++;
     this.deck.cards.shift();
     return turn.giveFeedback();
   }
-};
+}
 
 module.exports = Round;
