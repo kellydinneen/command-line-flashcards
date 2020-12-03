@@ -15,14 +15,12 @@ class Game {
   }
 
   start() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card3 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-
-    const deck = new Deck([card1, card2, card3])
-
+    const makeDeck = (deck, questionData) => {
+      let card = new Card(questionData.id, questionData.question, questionData.answers, questionData.correctAnswer);
+      deck.push(card);
+    }
+    const deck = new Deck(prototypeQuestions.reduce(reduction, []);
     const round = new Round(deck);
-
     this.printMessage(deck, round);
     this.printQuestion(round);
   }
