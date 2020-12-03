@@ -20,8 +20,8 @@ class Game {
   start() {
     this.startDeck();
     this.startRound(this.deck);
-    this.printMessage(this.deck, this.round);
-    this.printQuestion(this.round);
+    this.printMessage(this.deck, this.currentRound);
+    this.printQuestion(this.currentRound);
   }
 
   startDeck() {
@@ -30,11 +30,11 @@ class Game {
     cards.push(card);
     return cards;
     }
-    this.deck = new Deck(prototypeQuestions.reduce(reducer, []));
+    this.deck = new Deck(prototypeQuestions.reduce(reduceQuestionData, []));
   }
 
   startRound(deck) {
-    this.round = new Round(deck);
+    this.currentRound = new Round(deck);
   }
 };
 

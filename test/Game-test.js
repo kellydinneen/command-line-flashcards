@@ -2,12 +2,8 @@ const chai = require('chai');
 const expect = chai.expect;
 
 const Game = require('../src/Game');
-// const data = require('../data');
-// const prototypeQuestions = data.prototypeData;
 const Round = require('../src/Round');
 const Deck = require('../src/Deck');
-const Card = require('../src/Card');
-const Turn = require('../src/Turn');
 
 describe('Game', function() {
 
@@ -32,7 +28,7 @@ describe('Game', function() {
     const game = new Game();
     game.startDeck();
     game.startRound(game.deck);
-    expect(game.round).to.be.an.instanceof(Round);
+    expect(game.currentRound).to.be.an.instanceof(Round);
   });
 
 });
