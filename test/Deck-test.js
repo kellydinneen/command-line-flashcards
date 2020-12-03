@@ -28,8 +28,10 @@ describe('Deck', function() {
     const card1 = new Card(1, 'Can this deck count its cards?', ['yes', 'no'], 'yes');
     const card2 = new Card(3, 'What does a deck instantiation take as an argument', ['object', 'string', 'array'], 'array');
 
-    const deck = new Deck([card1, card2]);
+    let deck = new Deck([card1, card2]);
     expect(deck.countCards()).to.equal(2);
+    deck = new Deck([card1]);
+    expect(deck.countCards()).to.equal(1);
   });
 
 });

@@ -1,6 +1,9 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
+const Round = require('../src/Round');
+const Deck = require('../src/Deck');
+const Card = require('../src/Card');
 
 class Game {
   constructor() {}
@@ -15,17 +18,25 @@ class Game {
   }
 
   start() {
-    const card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card2 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const card3 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-
-    const deck = new Deck([card1, card2, card3])
-
-    const round = new Round(deck);
-
-    this.printMessage(deck, round);
-    this.printQuestion(round);
+    this.startDeck();
+    this.startRound(this.deck);
+    this.printMessage(this.deck, this.currentRound);
+    this.printQuestion(this.currentRound);
   }
-}
+
+  startDeck() {
+    const reduceQuestionData = (cards, questionData) => {
+    let card = new Card(questionData.id, questionData.question, questionData.answers, questionData.correctAnswer);
+    cards.push(card);
+    return cards;
+    }
+    this.deck = new Deck(prototypeQuestions.reduce(reduceQuestionData, []));
+  }
+
+  startRound(deck) {
+    this.currentRound = new Round(deck);
+  }
+};
+
 
 module.exports = Game;
