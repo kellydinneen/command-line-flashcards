@@ -184,7 +184,7 @@ describe('Round', function() {
     expect(round.returnCurrentCard()).to.equal(card3);
   });
 
-  it('should store incorrect guesses', function() {
+  it('should store questions answered incorrectly', function() {
     const card1 = new Card(
       1,
       'What allows you to define a set of related information using key-value pairs?',
@@ -209,9 +209,9 @@ describe('Round', function() {
     const round = new Round(deck);
     expect(round.incorrectGuesses).to.deep.equal([]);
     round.takeTurn(`function`);
-    expect(round.incorrectGuesses).to.deep.equal([`function`]);
+    expect(round.incorrectGuesses).to.deep.equal([card1]);
     round.takeTurn('iteration method');
-    expect(round.incorrectGuesses).to.deep.equal([`function`, 'iteration method']);
+    expect(round.incorrectGuesses).to.deep.equal([card1, card2]);
   });
 
   it('should provide feedback', function() {
