@@ -23,7 +23,9 @@ Flashcards is a simple command line game that allows a user to answer and reciev
 ### Basic Game Play
 #### <a name ="play"></a>
 
-  Game play is run entirely from the command line. Upon [deployment](#deployment), an introductory message informs the user of the number of flashcards in the current deck and the first card appears. Cards consist of a question about fundamental concepts in javascript and a set of multiple choice answers. Users navigate between answers using the up and down arrow keys and select an answer with the 'return' key. Once an answer is selected, feedback will appear, informing the user whether the answer was correct or incorrect. If a user exhausts all cards in the deck without any incorrect answers, a message will display informing the user that the round is over and the user has answered all questions correctly in a single try. If the user exhausts all cards in the deck, but has answered some of them incorrectly, then the user will enter into a review phase of game play, as described below.
+  Game play is run entirely from the command line. Upon [deployment](#deployment), an introductory message informs the user of the number of flashcards in the current deck, and the first card appears. Cards consist of a question about fundamental concepts in javascript and a set of multiple choice answers. Users navigate between answers using the up and down arrow keys and select an answer with the 'return' key. Once an answer is selected, feedback will appear, informing the user whether the answer was correct or incorrect. 
+  
+  If a user exhausts all cards in the deck without any incorrect answers, a message will display informing the user that the round is over and that the user has answered all questions correctly in a single try. If the user exhausts all cards in the deck, but has answered some of them incorrectly, then the user will enter into a review phase of game play, as described below.
   
 <p align = "center">
 <img src="https://media.giphy.com/media/33gtlU8cIsZ7S82Dgd/giphy.gif">
@@ -32,7 +34,7 @@ Flashcards is a simple command line game that allows a user to answer and reciev
 ### Reviewing Incorrect Answers
 #### <a name ="review"></a>
 
-  When a user finishes the deck, but has not answered all questions correctly, a review round will begin, preceded by a message informing the user of their performance during the previous round (percentage of correct answers) and the number of incorrectly answered questions that they have left to review. This round will precede in the same way as basic game play, except only questions answered incorrectly the first time will appear. If a user still fails to get 100% in this review round, another review round will follow with the cards that have yet to be answered correctly. 
+  When a user finishes the deck, but has not answered all questions correctly, a review round will begin, preceded by a message informing the user of their performance during the previous round (percentage of correct answers) and the number of incorrectly answered questions that they have left to review. This round will proceed in the same way as basic game play, except only questions previously answered incorrectly will appear. If a user still fails to get 100% in this review round, another review round will follow with only the cards that still have yet to be answered correctly. 
 
 
 <p align = "center">
