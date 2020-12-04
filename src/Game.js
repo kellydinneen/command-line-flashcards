@@ -9,9 +9,9 @@ class Game {
   constructor() {}
 
   printMessage(deck) {
+    //eslint-disable-next-line no-console
     console.log(
-      `Welcome to FlashCards!
-      You are playing with ${deck.countCards()} cards.
+      `Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
       -----------------------------------------------------------------------`)
   }
 
