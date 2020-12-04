@@ -43,7 +43,8 @@ Flashcards is a simple command line game that allows a user to answer and reciev
 
 ---
 ## Technology <a name ="technologies"></a>
-JavaScript
+* JavaScript
+* Mocha testing framework with Chai assertion library
 
 ## Deployment <a name ="deployment"></a>
 * Clone the repository
