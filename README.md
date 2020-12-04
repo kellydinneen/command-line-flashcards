@@ -1,79 +1,62 @@
-# FlashCards Starter Kit
 
-## Fork This Repo
+# Flashcards
+#### A Command Line Game For Reviewing Javascript Concepts
 
-On the top right corner of this page, click the **Fork** button.
+## Table of Contents
+* [Introduction](#introduction)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Deployment](#deployment)
+* [Unit Testing](#testing)
+* [Project Organization](#organization)
+* [Author](#author)
 
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Node server running on port 3000
-```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
-
-
-## Where to Add Your Code
-
-### JavaScript
-
-**Create all of your feature code files in the `src` directory.**
-
-We will be using the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+## Introduction <a name ="introduction"></a>
+Flashcards is a simple command line game that allows a user to answer and recieve feedabck for answers to multiple choice questions. This iteration of the game includes just one set of flashcards that review fundamental concepts in javascript. 
 
 ---
+## Features <a name ="features"></a>
+* [Basic Game Play](#play)
+* [Reviewing Incorrect Answers](#review)
 
-## Test Files Organization
 
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
+### Basic Game Play
+#### <a name ="play"></a>
 
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
+  Game play is run entirely from the command line. Upon [deployment](#deployment), an introductory message informs the user of the number of flashcards in the current deck and the first card appears. Cards consist of a question about fundamental concepts in javascript and a set of multiple choice answers. Users navigate between answers using the up and down arrow keys and select an answer with the 'return' key. Once an answer is selected, feedback will appear, informing the user whether the answer was correct or incorrect. If a user exhausts all cards in the deck without any incorrect answers, a message will display informing the user that the round is over and the user has answered all questions correctly in a single try. If the user exhausts all cards in the deck, but has answered some of them incorrectly, then the user will enter into a review phase of game play, as described below.
+  
+<p align = "center">
+<img src="https://media.giphy.com/media/33gtlU8cIsZ7S82Dgd/giphy.gif">
+</p>
 
-## Running Your Tests
+### Reviewing Incorrect Answers
+#### <a name ="review"></a>
 
-Run your test suite using the command:
+  When a user finishes the deck, but has not answered all questions correctly, a review round will begin, preceded by a message informing the user of their performance during the previous round (percentage of correct answers) and the number of incorrectly answered questions that they have left to review. This round will precede in the same way as basic game play, except only questions answered incorrectly the first time will appear. If a user still fails to get 100% in this review round, another review round will follow with the cards that have yet to be answered correctly. 
 
-```bash
-npm test
-```
 
-The test results will output to the terminal.
+<p align = "center">
+<img src="https://media.giphy.com/media/bV1DJJhhaHJR1MTS4t/giphy.gif">
+</p>
 
 ---
+## Technology <a name ="technologies"></a>
+JavaScript
 
-## Linting Your Code
+## Deployment <a name ="deployment"></a>
+* Clone the repository
+* CD into directory
+* Run `node index.html` from command line
 
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
+## Unit Testing <a name ="testing"></a>
+Game play is facilitated by five javascript classes, which can be found in the "src" folder of the repo: `Card` `Deck` `Turn` `Round` and `Game`. All classes have corresponding test files which can be found in the repo's "test" folder. To run the unit tests:
+* Clone the repository
+* CD into the directory
+* Run `npm test` 
+* Tests are organized in blocks by class
 
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory. 
+## Project Organization <a name ="organization"></a>
+The tasks associated with each iteration of this project were broken down via a [Kan-Ban board in the "projects" section](https://github.com/kellydinneen/flashcards-starter/projects/1) of this repo.
 
----
+## Author
+ [***Kelly Dinneen***](https://github.com/kellydinneen)
