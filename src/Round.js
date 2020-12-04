@@ -14,6 +14,7 @@ class Round {
     return ((this.turns - this.incorrectGuesses.length) / this.turns) * 100;
   }
   reviewIncorrectGuesses() {
+    //eslint-disable-next-line no-console
     console.log(`*********THAT's ALL THE QUESTIONS!********
     You answered ${this.calculatePercentCorrect()}% of them correctly. Now, let's review only those that you answered incorrectly. So in this round, you'll answer ${this.incorrectGuesses.length} questions.
     ---------------------------------------------------`)
@@ -23,10 +24,9 @@ class Round {
     this.attemptCount++;
   }
   endRound() {
-    console.log(
-      `*********YOU'RE DONE!*********
-      It took you ${this.attemptCount} attempts
-      to answer all of the questions correctly!`);
+    //eslint-disable-next-line no-console
+    console.log(`*********YOU'RE DONE!*********
+      It took you ${this.attemptCount} attempts to answer all of the questions correctly!`);
   }
   takeTurn(guess) {
     const turn = new Turn(guess, this.returnCurrentCard());
